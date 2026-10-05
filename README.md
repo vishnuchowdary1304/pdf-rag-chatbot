@@ -59,3 +59,47 @@ server/src/  app.js (routes) pdf.js textworker.js chunker.js retrieval.js llm.js
 client/src/  App.jsx styles.css
 samples/     sample.pdf scanned.pdf
 ```
+🏗️ Architecture:
+
+PDF
+ ↓
+Text Extraction
+ ↓
+Chunking
+ ↓
+ ┌─────────────────┐
+ │                 │
+ ▼                 ▼
+BM25          Embeddings
+ │                 │
+ │                 ▼
+ │          Vector Similarity
+ │                 │
+ └────────┬────────┘
+          ▼
+    Relevant Chunks
+          │
+          ▼
+        LLM
+          │
+          ▼
+       Answer
+          │
+          ▼
+    Page Sources
+    
+🛠️ Tech Stack:
+Frontend: React, Vite, JavaScript, CSS
+Backend: Node.js, Express.js, Multer, PDF parsing
+RAG / Retrieval: BM25, embeddings, cosine similarity, text chunking
+AI: OpenAI-compatible API
+📂 Project Structure:
+
+pdf-rag-chat/
+├── client/
+├── samples/
+├── server/
+│   └── src/
+├── .gitignore
+├── package.json
+└── README.md
