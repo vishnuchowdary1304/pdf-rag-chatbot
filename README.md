@@ -61,12 +61,12 @@ samples/     sample.pdf scanned.pdf
 ```
 🏗️ Architecture:
 
-PDF
- ↓
-Text Extraction
- ↓
-Chunking
- ↓
+       PDF
+        ↓
+    Text Extraction
+        ↓
+     Chunking
+        ↓
  ┌─────────────────┐
  │                 │
  ▼                 ▼
@@ -93,6 +93,8 @@ Frontend: React, Vite, JavaScript, CSS
 Backend: Node.js, Express.js, Multer, PDF parsing
 RAG / Retrieval: BM25, embeddings, cosine similarity, text chunking
 AI: OpenAI-compatible API
+
+
 📂 Project Structure:
 
 pdf-rag-chat/
